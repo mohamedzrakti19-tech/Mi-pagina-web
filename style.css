@@ -1,0 +1,799 @@
+/* ============================
+   RESET / ESTILOS GENERALES
+============================ */
+*{
+    padding: 0;                 /* Elimina padding por defecto */
+    margin: 0;                  /* Elimina margin por defecto */
+    text-decoration: none;      /* Sin subrayado en enlaces */
+    list-style: none;           /* Sin bullets en listas */
+    box-sizing: border-box;     /* Padding y border incluidos en el ancho total */
+}
+
+body{
+    background-color: #2c2c2c; /* Fondo oscuro de toda la página */
+}
+
+a, li{
+    font-family: sans-serif;    /* Fuente general */
+    color: white;               /* Color de texto por defecto */
+}
+
+/* ============================
+   HEADER / NAVEGACIÓN
+============================ */
+.logo-header img{
+    width: 50px;                /* Tamaño del logo */
+}
+
+header{
+    background-color:#222;
+    display: flex;              /* Flexbox para alinear logo y menú */
+    justify-content: space-between; /* Separación entre logo y menú */
+    align-items: center;        /* Centrado vertical */
+    padding: 0.5rem 2rem;       /* Espaciado interno */
+}
+
+.nav-menu ul{
+    display: flex;              /* Menú horizontal */
+    align-items: center;
+}
+
+.nav-menu li{
+    margin-right: 1.5rem;       /* Separación entre enlaces */
+}
+
+.nav-menu a:hover{
+    color: aquamarine;          /* Efecto hover en enlaces */
+}
+
+/* Último elemento destacado (Registro) */
+.nav-menu li:last-child{
+    background-color: aquamarine;
+    border: 2px solid aquamarine;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.2rem;
+}
+
+.nav-menu li:last-child:hover{
+    background-color: transparent;
+    border: 2px solid aquamarine;
+}
+
+/* ============================
+   MAIN / GRID DE PRODUCTOS
+============================ */
+main{
+    padding: 60px 0;            /* Espaciado superior e inferior */
+}
+
+.product-grid{
+    display: grid;                             /* Grid responsive */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;                                 /* Separación entre tarjetas */
+    padding: 0 20px;
+}
+
+.product-card{
+    background-color: #24262B;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación hover */
+}
+
+.product-card:hover{
+    transform: translateY(-8px);               /* Levanta la tarjeta al pasar el cursor */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);   /* Sombra */
+}
+
+.product-card img {
+    width: 100%;       /* Ocupa todo el ancho de la tarjeta */
+    height: 220px;     /* Mantiene altura fija */
+    object-fit: contain; /* Muestra la imagen completa sin recorte */
+}
+
+.product-info{
+    padding: 20px;
+}
+
+.product-info h3{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.product-info p{
+    color: #bbbbbb;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.product-info button{
+    background-color: aquamarine;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #222;
+    transition: 0.3s;
+}
+
+.product-info button:hover{
+    background-color: transparent;
+    border: 2px solid aquamarine;
+    color: aquamarine;
+}
+
+/* Precio */
+.price {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: aquamarine;
+    margin-bottom: 15px;
+}
+
+/* ============================
+   ETIQUETA DE REBAJA Y ANIMACIONES
+============================ */
+.etiqueta-rebaja {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: crimson;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 2;
+    animation: rebajaAnim 1s ease-in-out;
+}
+
+/* Precio antiguo y nuevo */
+.precio-antiguo {
+    text-decoration: line-through; /* Tachado del precio anterior */
+    color: #999;
+    margin-right: 10px;
+}
+
+.precio-nuevo {
+    color: aquamarine;
+    font-weight: bold;
+    animation: brillo 1.5s ease-in-out infinite alternate; /* Animación de brillo */
+}
+
+@keyframes brillo {
+    0% { text-shadow: 0 0 5px aquamarine, 0 0 10px aquamarine; }
+    50% { text-shadow: 0 0 10px aquamarine, 0 0 20px aquamarine; }
+    100% { text-shadow: 0 0 5px aquamarine, 0 0 10px aquamarine; }
+}
+
+/* ============================
+   CONTACTO
+============================ */
+.contacto {
+    padding: 80px 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+.contacto h2 {
+    color: aquamarine;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.input-group input,
+textarea {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background-color: #333;
+    color: white;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 15px;
+    resize: none;
+    height: 120px;
+}
+
+.btn-enviar {
+    margin-top: 20px;
+    background-color: aquamarine;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #222;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-enviar:hover {
+    background-color: transparent;
+    border: 2px solid aquamarine;
+    color: aquamarine;
+}
+
+/* Mensaje de envío animado */
+.mensaje-enviado {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+    color: aquamarine;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#fake-send:checked ~ .contact-form {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#fake-send:checked ~ .mensaje-enviado {
+    opacity: 1;
+    transform: scale(1);
+    animation: hideMessage 4s forwards;
+}
+
+@keyframes hideMessage {
+  0%, 70% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+#fake-send:checked ~ .contact-form {
+   animation: showForm 4s forwards;
+}
+
+@keyframes showForm {
+  0%, 80% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ============================
+   LOGIN / REGISTRO
+============================ */
+.auth-wrapper {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 0;
+    background: transparent;
+    pointer-events: auto;
+}
+
+.auth-container {
+    position: relative;
+    margin: 0 auto;
+    width: 360px;
+    max-width: calc(100% - 40px);
+    background-color: #222;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 0 15px rgba(0,255,200,0.08);
+    color: white;
+    overflow: visible;
+    z-index: 10;
+    font-family: sans-serif;
+}
+
+/* Formularios con animación */
+.form-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.45s ease, opacity 0.45s ease;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+.form-box h2 { 
+    text-align:center; 
+    color: aquamarine; 
+    margin-bottom:18px; 
+}
+.form-box input {
+    width:100%; 
+    padding:10px; 
+    margin-bottom:12px; 
+    border:none; 
+    border-radius:6px; 
+    background:#333; 
+    color:#fff; 
+    box-sizing:border-box; 
+}
+.form-box button {
+    width:100%; 
+    padding:10px; 
+    border:none; 
+    border-radius:6px; 
+    background:aquamarine; 
+    color:#222; 
+    font-weight:700; 
+    cursor:pointer;
+}
+.form-box button:hover {
+    background:transparent; 
+    border:2px solid aquamarine; 
+    color:aquamarine; 
+}
+
+.switch-text {
+    text-align:center; 
+    color:#bbb; 
+    margin-top:10px; 
+}
+.switch-link {
+    color:aquamarine; 
+    cursor:pointer; 
+    font-weight:700; 
+}
+
+/* Alternar entre login y registro */
+.register-form {
+    transform: translateX(100%); 
+    opacity: 0; z-index: 1; 
+}
+#toggle-auth:checked ~ .auth-container .login-form {
+    transform: translateX(-100%); 
+    opacity: 0; z-index: 1; 
+}
+#toggle-auth:checked ~ .auth-container .register-form {
+    transform: translateX(0); 
+    opacity: 1; z-index: 2; 
+}
+
+/* ============================
+   FOOTER
+============================ */
+.container{ 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.footer{
+    background-color: #24262B;
+    padding: 80px 0;
+}
+
+.footer-row{ display: flex; flex-wrap: wrap; }
+
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4{
+    font-size: 20px;
+    color: #FFFF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid aquamarine;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover{
+    color: aquamarine;
+    padding-left: 6px;
+}
+
+.social-links a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #FFFF;
+    transition: all .5s ease;
+}
+
+.social-links a:hover{
+    background-color: aquamarine;
+}
+
+
+
+/* ============================
+   SECCIÓN NOSOTROS
+============================ */
+
+.nosotros-section {
+    padding: 60px 20px;        /* Separación arriba y abajo */
+    background-color: #222;    /* Mismo estilo oscuro de tu web */
+    text-align: center;
+}
+
+.nosotros-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;       /* Espacio entre título y texto */
+}
+
+.nosotros-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.nosotros-section div {
+    margin-top: 40px;
+    font-size: 20px;
+    color: aquamarine;
+}
+
+
+
+/* ============================
+   SECCIÓN NUESTROS SERVICIOS
+============================ */
+
+.servicios-section {
+    padding: 60px 20px;
+    background-color: #1e1e1e;
+    text-align: center;
+}
+
+.servicios-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.servicios-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.servicios-lista {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.servicio {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+
+.servicio h3 {
+    font-size: 22px;
+    color: aquamarine;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+
+
+/* ============================
+   SECCIÓN POLÍTICA DE PRIVACIDAD
+============================ */
+
+.privacidad-section {
+    padding: 60px 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+.privacidad-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.privacidad-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto 25px auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+
+/* ============================
+   SECCIÓN AFÍLIATE
+============================ */
+
+.afiliate-section {
+    padding: 60px 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+.afiliate-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.afiliate-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.afiliate-destacado {
+    margin-top: 40px;
+    font-size: 20px;
+    color: aquamarine;
+}
+
+
+
+/* ============================
+   APARTADO PREGUNTAS
+============================ */
+
+.preguntas-section {
+    padding: 60px 20px;
+    background-color: #1f1f1f;
+    text-align: left;
+}
+
+.preguntas-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.preguntas-section p {
+    color: #ccc;
+    font-size: 18px;
+    max-width: 850px;
+    margin: 0 auto 30px auto;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.preguntas-lista {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #ddd;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.preguntas-lista li {
+    margin-bottom: 15px;
+}
+
+
+
+/* ============================
+   APARTADO COMPRAS
+============================ */
+
+.compras-section {
+    padding: 60px 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+.compras-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.compras-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+/* ============================
+   SECCIÓN ENVIOS
+============================ */
+
+.envios-section {
+    padding: 60px 20px;           /* Espacio arriba y abajo */
+    background-color: #1e1e1e;    /* Fondo oscuro consistente con la web */
+    text-align: center;
+}
+
+.envios-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.envios-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+
+/* ============================
+   SECCIÓN PAGOS
+============================ */
+
+.pagos-section {
+    padding: 60px 20px;           /* Espacio arriba y abajo */
+    background-color: #1e1e1e;    /* Fondo oscuro consistente con la web */
+    text-align: center;
+}
+
+.pagos-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.pagos-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+/* ============================
+   SECCIÓN ROPA
+============================ */
+
+.ropa-section {
+    padding: 60px 20px;           /* Espacio arriba y abajo */
+    background-color: #1e1e1e;    /* Fondo oscuro coherente con la web */
+    text-align: center;
+}
+
+.ropa-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.ropa-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+
+/* ============================
+   SECCIÓN ZAPATOS
+============================ */
+
+.zapatos-section {
+    padding: 60px 20px;           /* Espacio arriba y abajo */
+    background-color: #1e1e1e;    /* Fondo oscuro coherente con la web */
+    text-align: center;
+}
+
+.zapatos-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.zapatos-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+
+/* ============================
+   SECCIÓN MOCHILAS
+============================ */
+
+.mochilas-section {
+    padding: 60px 20px;           /* Espacio arriba y abajo */
+    background-color: #1e1e1e;    /* Fondo oscuro coherente con la web */
+    text-align: center;
+}
+
+.mochilas-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.mochilas-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+
+/* ============================
+   SECCIÓN TECNOLOGÍA
+============================ */
+
+.tecnologia-section {
+    padding: 60px 20px;           /* Espacio arriba y abajo */
+    background-color: #1e1e1e;    /* Fondo oscuro coherente con la web */
+    text-align: center;
+}
+
+.tecnologia-section h2 {
+    color: aquamarine;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.tecnologia-section p {
+    color: #ccc;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}

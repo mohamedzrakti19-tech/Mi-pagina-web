@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web</title>
+    <!-- Enlace al archivo CSS propio -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Enlace a los iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- =====================================
+         HEADER (Encabezado con logo y menú)
+    ====================================== -->
+    <header class="header">
+        <div class="logo-header">
+            <!-- Logo principal -->
+            <img src="img/logo.png" alt="">
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ropa.html">Ropa</a></li>
+                <li><a href="zapatos.html">Zapatos</a></li>
+                <li><a href="mochilas.html">Mochilas</a></li>
+                <li><a href="tecnologia.html">Tecnologia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <!-- En lugar de enlace, se usa una etiqueta label
+                     que abre el formulario modal al hacer clic -->
+                <li><label for="login-modal" class="registro-link">Registro</label></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =====================================
+         MAIN (Sección principal con productos)
+    ====================================== -->
+    <main>
+        <div class="container">
+            <div class="product-grid">
+                <!-- ===== Producto 1 ===== -->
+                <div class="product-card">
+                    <img src="productos/Camiseta Negra Nike.png" alt="Camisa Negra">
+                    <div class="product-info">
+                        <h3>Camiseta Negra</h3>
+                        <p>Cómoda, moderna y de alta calidad.</p>
+                        <p class="precio">
+                            <span class="precio-antiguo">41,99 €</span>
+                            <span class="precio-nuevo">27,99 €</span>
+                        </p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <!-- ===== Producto 2 ===== -->
+                <div class="product-card">
+                    <img src="productos/Pantalones Adidas Negro.png" alt="Producto 2">
+                    <div class="product-info">
+                        <h3>Pantalones Adidas Negro</h3>
+                        <p>Perfectos y cómodos para tu día a día.</p>
+                        <span class="price">22,99 €</span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <!-- ===== Producto 3 ===== -->
+                <div class="product-card">
+                    <img src="productos/Sudadera Puma Negra.png" alt="Producto 3">
+                    <div class="product-info">
+                        <h3>Sudadera Puma Negra</h3>
+                        <p>Ligera, perfecta para el invierno.</p>
+                        <p class="precio">
+                            <span class="precio-antiguo">52,45 €</span>
+                            <span class="precio-nuevo">30,95 €</span>
+                        </p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <!-- ===== Producto 4 ===== -->
+                <div class="product-card">
+                    <img src="productos/Camisa Elegante Azul.png" alt="Producto 4">
+                    <div class="product-info">
+                        <h3>Camisa Elegante Azul</h3>
+                        <p>Elegante y perfecta para encuentros.</p>
+                        <span class="price">23,45 €</span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- =========================
+         FOOTER (Pie de página)
+    ========================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+
+                <!-- Sección: Compañía -->
+                <div class="footer-links">
+                    <h4>Compania</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="nuestro-servicio.html">Nuestro servicio</a></li>
+                        <li><a href="politica-de-privacidad.html">Politica de privacidad</a></li>
+                        <li><a href="afiliate.html">Afiliate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección: Ayuda -->
+                <div class="footer-links">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="preguntas.html">Preguntas</a></li>
+                        <li><a href="compras.html">Compras</a></li>
+                        <li><a href="envios.html">Envios</a></li>
+                        <li><a href="pago.html">Pago</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección: Tienda -->
+                <div class="footer-links">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="Info footer/ropa.html">Ropa</a></li>
+                        <li><a href="Info footer/zapatos.html">Zapatos</a></li>
+                        <li><a href="Info footer/mochilas.html">Mochilas</a></li>
+                        <li><a href="Info footer/tecnologia.html">Tecnologia</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección: Redes sociales -->
+                <div class="footer-links">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href=""><i class="fab fa-meta"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
