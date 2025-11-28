@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web</title>
+    <!-- Enlace al archivo CSS principal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Enlace a los iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- =====================================
+         HEADER: Contiene el logo y el menú de navegación
+    ====================================== -->
+    <header class="header">
+        <div class="logo-header">
+            <!-- Logo del sitio -->
+            <img src="img/logo.png" alt="">
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ropa.html">Ropa</a></li>
+                <li><a href="zapatos.html">Zapatos</a></li>
+                <li><a href="mochilas.html">Mochilas</a></li>
+                <li><a href="tecnologia.html">Tecnologia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <!-- Enlace a la página de registro/inicio de sesión -->
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- =====================================
+         MAIN: Contiene la sección de productos
+    ====================================== -->
+    <main>
+        <div class="container">
+            <!-- Grid de productos -->
+            <div class="product-grid">
+
+                <!-- ===== Producto 1 ===== -->
+                <div class="product-card">
+                    <img src="productos/Zapatillas casuales retro para hombres.png" alt="Producto 1">
+                    <div class="product-info">
+                        <h3>Zapatillas casuales retro para hombres</h3>
+                        <p>Perfectas para tu día a día.</p>
+                        <span class="price">19,99 €</span>
+                        <!-- Botón para añadir al carrito -->
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <!-- ===== Producto 2 ===== -->
+                <div class="product-card">
+                    <img src="productos/Nike Air Max Dn Oly.png" alt="Producto 2">
+                    <div class="product-info">
+                        <h3>Nike Air Max Dn Oly</h3>
+                        <p>Diseño bonito y perfectas para cualquier momento.</p>
+                        <!-- Precio con rebaja -->
+                        <p class="precio">
+                            <span class="precio-antiguo">115,99 €</span>
+                            <span class="precio-nuevo">92,55 €</span>
+                        </p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <!-- ===== Producto 3 ===== -->
+                <div class="product-card">
+                    <img src="productos/Zapatillas de running Stride Adidas.png" alt="Producto 3">
+                    <div class="product-info">
+                        <h3>Zapatillas de running Stride Adidas</h3>
+                        <p>Increíbles para salir a correr.</p>
+                        <!-- Precio con rebaja -->
+                        <p class="precio">
+                            <span class="precio-antiguo">109,99 €</span>
+                            <span class="precio-nuevo">76,95 €</span>
+                        </p>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <!-- ===== Producto 4 ===== -->
+                <div class="product-card">
+                    <img src="productos/ASICS T669N 2001 RS.png" alt="Producto 4">
+                    <div class="product-info">
+                        <h3>ASICS T669N 2001 RS</h3>
+                        <p>Rendimiento excelente y cómodas.</p>
+                        <span class="price">85,55 €</span>
+                        <button>Añadir al carrito</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <!-- =========================
+         FOOTER (Pie de página)
+    ========================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+
+                <!-- Sección: Compañía -->
+                <div class="footer-links">
+                    <h4>Compania</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="nuestro-servicio.html">Nuestro servicio</a></li>
+                        <li><a href="politica-de-privacidad.html">Politica de privacidad</a></li>
+                        <li><a href="afiliate.html">Afiliate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección: Ayuda -->
+                <div class="footer-links">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="preguntas.html">Preguntas</a></li>
+                        <li><a href="compras.html">Compras</a></li>
+                        <li><a href="envios.html">Envios</a></li>
+                        <li><a href="pago.html">Pago</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección: Tienda -->
+                <div class="footer-links">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="Info footer/ropa.html">Ropa</a></li>
+                        <li><a href="Info footer/zapatos.html">Zapatos</a></li>
+                        <li><a href="Info footer/mochilas.html">Mochilas</a></li>
+                        <li><a href="Info footer/tecnologia.html">Tecnologia</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección: Redes sociales -->
+                <div class="footer-links">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href=""><i class="fab fa-meta"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
